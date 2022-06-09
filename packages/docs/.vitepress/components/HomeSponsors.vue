@@ -1,14 +1,24 @@
 <template>
   <div class="sponsors_outer">
     <div>
-      <HomeSponsorsGroup v-if="sponsors.platinum.length" name="Platinum" size="96" />
+      <HomeSponsorsGroup
+        v-if="sponsors.platinum.length"
+        name="Platinum"
+        size="96"
+      />
 
       <HomeSponsorsGroup v-if="sponsors.gold.length" name="Gold" size="38" />
 
-      <HomeSponsorsGroup v-if="sponsors.silver.length" name="Silver" size="24" />
+      <HomeSponsorsGroup
+        v-if="sponsors.silver.length"
+        name="Silver"
+        size="24"
+      />
 
       <div class="cta">
-        <a class="become-sponsor" href="https://github.com/sponsors/posva">Become a Sponsor!</a>
+        <a class="become-sponsor" href="https://github.com/sponsors/posva"
+          >Become a Sponsor!</a
+        >
       </div>
     </div>
   </div>
@@ -47,4 +57,3 @@ onMounted(() => {
   margin-top: 1rem;
 }
 </style>
-

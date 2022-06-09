@@ -59,12 +59,13 @@ export default defineComponent({
       doubleCount,
       // this one will be reactive
       doubleValue: computed(() => store.doubleCount),
-      }
+    }
   },
 })
 ```
 
 In order to extract properties from the store while keeping its reactivity, you need to use `storeToRefs()`. It will create refs for any reactive property. This is useful when you are only using state from the store but not calling any action:
+
 ```js
 import { storeToRefs } from 'pinia'
 
@@ -78,7 +79,7 @@ export default defineComponent({
 
     return {
       name,
-      doubleCount
+      doubleCount,
     }
   },
 })

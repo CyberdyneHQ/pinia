@@ -192,4 +192,3 @@ To learn more about Pinia, check [its documentation](https://pinia.vuejs.org).
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
