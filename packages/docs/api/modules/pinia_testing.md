@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -28,8 +28,8 @@ they are replaced with `jest.fn()`, otherwise, you must provide your own
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type                                                              | Description                            |
+| :-------- | :---------------------------------------------------------------- | :------------------------------------- |
 | `options` | [`TestingOptions`](../interfaces/pinia_testing.TestingOptions.md) | options to configure the testing pinia |
 
 #### Returns

@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -15,12 +15,12 @@ augment stores with the plugin API. @see [DefineStoreOptionsBase](pinia.DefineSt
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Id` | extends `string` |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) |
-| `G` | `G` |
-| `A` | `A` |
+| Name | Type                                                 |
+| :--- | :--------------------------------------------------- |
+| `Id` | extends `string`                                     |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) |
+| `G`  | `G`                                                  |
+| `A`  | `A`                                                  |
 
 ## Hierarchy
 
@@ -40,7 +40,7 @@ Optional object of actions.
 
 [packages/pinia/src/types.ts:652](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L652)
 
-___
+---
 
 ### getters
 
@@ -52,7 +52,7 @@ Optional object of getters.
 
 [packages/pinia/src/types.ts:645](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L645)
 
-___
+---
 
 ### id
 
@@ -81,21 +81,21 @@ storage:
 ```ts
 const useStore = defineStore('main', {
   state: () => ({
-    n: useLocalStorage('key', 0)
+    n: useLocalStorage('key', 0),
   }),
   hydrate(storeState, initialState) {
     // @ts-expect-error: https://github.com/microsoft/TypeScript/issues/43826
     storeState.n = useLocalStorage('key', 0)
-  }
+  },
 })
 ```
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `storeState` | `UnwrapRef`<`S`\> | the current state in the store |
-| `initialState` | `UnwrapRef`<`S`\> | initialState |
+| Name           | Type              | Description                    |
+| :------------- | :---------------- | :----------------------------- |
+| `storeState`   | `UnwrapRef`<`S`\> | the current state in the store |
+| `initialState` | `UnwrapRef`<`S`\> | initialState                   |
 
 #### Returns
 
@@ -105,7 +105,7 @@ const useStore = defineStore('main', {
 
 [packages/pinia/src/types.ts:685](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L685)
 
-___
+---
 
 ### state
 

@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -14,12 +14,12 @@ Interface to be extended by the user when they add properties through plugins.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Id` | extends `string` = `string` |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
-| `G` | [`_GettersTree`](../modules/pinia.md#_getterstree)<`S`\> |
-| `A` | [`_ActionsTree`](../modules/pinia.md#_actionstree) |
+| Name | Type                                                                                                |
+| :--- | :-------------------------------------------------------------------------------------------------- |
+| `Id` | extends `string` = `string`                                                                         |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
+| `G`  | [`_GettersTree`](../modules/pinia.md#_getterstree)<`S`\>                                            |
+| `A`  | [`_ActionsTree`](../modules/pinia.md#_actionstree)                                                  |
 
 ## Properties
 
@@ -33,7 +33,7 @@ Nuxt context.
 
 [packages/nuxt/src/module.ts:68](https://github.com/vuejs/pinia/blob/2b998ee/packages/nuxt/src/module.ts#L68)
 
-___
+---
 
 ### double
 
@@ -41,9 +41,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:14](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L14)
+[packages/pinia/**tests**/storePlugins.spec.ts:14](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L14)
 
-___
+---
 
 ### globalA
 
@@ -51,9 +51,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:11](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L11)
+[packages/pinia/**tests**/storePlugins.spec.ts:11](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L11)
 
-___
+---
 
 ### globalB
 
@@ -61,9 +61,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:12](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L12)
+[packages/pinia/**tests**/storePlugins.spec.ts:12](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L12)
 
-___
+---
 
 ### hasApp
 
@@ -71,9 +71,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:9](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L9)
+[packages/pinia/**tests**/storePlugins.spec.ts:9](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L9)
 
-___
+---
 
 ### idFromPlugin
 
@@ -81,9 +81,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:10](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L10)
+[packages/pinia/**tests**/storePlugins.spec.ts:10](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L10)
 
-___
+---
 
 ### pluginN
 
@@ -91,9 +91,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:7](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L7)
+[packages/pinia/**tests**/storePlugins.spec.ts:7](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L7)
 
-___
+---
 
 ### shared
 
@@ -101,9 +101,9 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:13](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L13)
+[packages/pinia/**tests**/storePlugins.spec.ts:13](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L13)
 
-___
+---
 
 ### uid
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[packages/pinia/__tests__/storePlugins.spec.ts:8](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L8)
+[packages/pinia/**tests**/storePlugins.spec.ts:8](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/__tests__/storePlugins.spec.ts#L8)
 
 ## Accessors
 
@@ -131,8 +131,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                                                                       |
+| :------ | :------------------------------------------------------------------------- |
 | `value` | `RouteLocationNormalizedLoaded` \| `Ref`<`RouteLocationNormalizedLoaded`\> |
 
 #### Returns

@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -28,7 +28,7 @@ Direct mutation of the state:
 
 [packages/pinia/src/types.ts:50](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L50)
 
-___
+---
 
 ### patchFunction
 
@@ -42,7 +42,7 @@ Mutated the state with `$patch` and a function
 
 [packages/pinia/src/types.ts:64](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L64)
 
-___
+---
 
 ### patchObject
 

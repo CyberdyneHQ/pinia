@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -8,7 +8,7 @@ sidebarDepth: 3
 
 # Interface: \_SubscriptionCallbackMutationBase
 
-[pinia](../modules/pinia.md)._SubscriptionCallbackMutationBase
+[pinia](../modules/pinia.md).\_SubscriptionCallbackMutationBase
 
 Base type for the context passed to a subscription callback. Internal type.
 
@@ -34,7 +34,7 @@ Base type for the context passed to a subscription callback. Internal type.
 
 [packages/pinia/src/types.ts:81](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L81)
 
-___
+---
 
 ### type
 

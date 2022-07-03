@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -8,7 +8,7 @@ sidebarDepth: 3
 
 # Interface: \_StoreOnActionListenerContext<Store, ActionName, A\>
 
-[pinia](../modules/pinia.md)._StoreOnActionListenerContext
+[pinia](../modules/pinia.md).\_StoreOnActionListenerContext
 
 Actual type for [StoreOnActionListenerContext](../modules/pinia.md#storeonactionlistenercontext). Exists for refactoring
 purposes. For internal use only.
@@ -16,11 +16,11 @@ For internal use **only**
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Store` | `Store` |
+| Name         | Type             |
+| :----------- | :--------------- |
+| `Store`      | `Store`          |
 | `ActionName` | extends `string` |
-| `A` | `A` |
+| `A`          | `A`              |
 
 ## Properties
 
@@ -34,7 +34,7 @@ Parameters passed to the action
 
 [packages/pinia/src/types.ts:195](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L195)
 
-___
+---
 
 ### name
 
@@ -46,7 +46,7 @@ Name of the action
 
 [packages/pinia/src/types.ts:185](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L185)
 
-___
+---
 
 ### store
 
@@ -70,8 +70,8 @@ value (other than `undefined`) to **override** the returned value.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                                                                                                                                                                                                                                                                                                            |
+| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `callback` | `A` extends `Record`<`ActionName`, [`_Method`](../modules/pinia.md#_method)\> ? (`resolvedReturn`: [`_Awaited`](../modules/pinia.md#_awaited)<`ReturnType`<`A`[`ActionName`]\>\>) => `void` \| `ReturnType`<`A`[`ActionName`]\> \| [`_Awaited`](../modules/pinia.md#_awaited)<`ReturnType`<`A`[`ActionName`]\>\> : () => `void` |
 
 #### Returns
@@ -82,7 +82,7 @@ value (other than `undefined`) to **override** the returned value.
 
 [packages/pinia/src/types.ts:204](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L204)
 
-___
+---
 
 ### onError
 
@@ -93,8 +93,8 @@ stop it fro propagating.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                              |
+| :--------- | :-------------------------------- |
 | `callback` | (`error`: `unknown`) => `unknown` |
 
 #### Returns

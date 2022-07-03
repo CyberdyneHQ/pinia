@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -20,10 +20,10 @@ sidebarDepth: 3
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `ModuleThis` |
-| `moduleOptions` | `any` |
+| Name            | Type         |
+| :-------------- | :----------- |
+| `this`          | `ModuleThis` |
+| `moduleOptions` | `any`        |
 
 #### Returns
 

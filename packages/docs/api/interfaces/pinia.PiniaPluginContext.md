@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -14,12 +14,12 @@ Context argument passed to Pinia plugins.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Id` | extends `string` = `string` |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
-| `G` | [`_GettersTree`](../modules/pinia.md#_getterstree)<`S`\> |
-| `A` | [`_ActionsTree`](../modules/pinia.md#_actionstree) |
+| Name | Type                                                                                                |
+| :--- | :-------------------------------------------------------------------------------------------------- |
+| `Id` | extends `string` = `string`                                                                         |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
+| `G`  | [`_GettersTree`](../modules/pinia.md#_getterstree)<`S`\>                                            |
+| `A`  | [`_ActionsTree`](../modules/pinia.md#_actionstree)                                                  |
 
 ## Properties
 
@@ -33,7 +33,7 @@ Current app created with `Vue.createApp()`.
 
 [packages/pinia/src/rootStore.ts:117](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/rootStore.ts#L117)
 
-___
+---
 
 ### options
 
@@ -45,7 +45,7 @@ Options object defining the store passed to `defineStore()`.
 
 [packages/pinia/src/rootStore.ts:127](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/rootStore.ts#L127)
 
-___
+---
 
 ### pinia
 
@@ -57,7 +57,7 @@ pinia instance.
 
 [packages/pinia/src/rootStore.ts:112](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/rootStore.ts#L112)
 
-___
+---
 
 ### store
 

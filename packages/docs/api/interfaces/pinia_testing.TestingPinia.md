@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -31,7 +31,7 @@ App used by Pinia
 
 [packages/testing/src/testing.ts:72](https://github.com/vuejs/pinia/blob/2b998ee/packages/testing/src/testing.ts#L72)
 
-___
+---
 
 ### state
 
@@ -55,8 +55,8 @@ root state
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type          |
+| :---- | :------------ |
 | `app` | `App`<`any`\> |
 
 #### Returns
@@ -71,7 +71,7 @@ root state
 
 [packages/pinia/src/rootStore.ts:46](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/rootStore.ts#L46)
 
-___
+---
 
 ### use
 
@@ -81,8 +81,8 @@ Adds a store plugin to extend every store
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type                                  | Description         |
+| :------- | :------------------------------------ | :------------------ |
 | `plugin` | [`PiniaPlugin`](pinia.PiniaPlugin.md) | store plugin to add |
 
 #### Returns

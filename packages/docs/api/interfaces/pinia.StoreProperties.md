@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -14,8 +14,8 @@ Properties of a store.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name | Type             |
+| :--- | :--------------- |
 | `Id` | extends `string` |
 
 ## Hierarchy
@@ -36,7 +36,7 @@ Unique identifier of the store
 
 [packages/pinia/src/types.ts:265](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L265)
 
-___
+---
 
 ### \_customProperties
 
