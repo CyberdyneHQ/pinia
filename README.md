@@ -38,46 +38,59 @@ Pinia is the most similar English pronunciation of the word _pineapple_ in Spani
 <!--sponsors start-->
 
 <h4 align="center">Gold Sponsors</h4>
-  <p align="center">
+<p align="center">
     <a href="https://vuejobs.com/?utm_source=vuerouter&utm_campaign=sponsor" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source srcset="https://posva-sponsors.pages.dev/logos/vuejobs.svg" media="(prefers-color-scheme: dark)" height="72px" alt="VueJobs" />
-        <img src="https://posva-sponsors.pages.dev/logos/vuejobs.svg" height="72px" alt="VueJobs" />
-      </picture>
-    </a>
-  </p>
+    <picture>
+      <source srcset="https://posva-sponsors.pages.dev/logos/vuejobs.svg" media="(prefers-color-scheme: dark)" height="72px" alt="VueJobs" />
+      <img src="https://posva-sponsors.pages.dev/logos/vuejobs.svg" height="72px" alt="VueJobs" />
+    </picture>
+  </a>
+</p>
 
 <h4 align="center">Silver Sponsors</h4>
-  <p align="center">
+<p align="center">
     <a href="https://www.vuemastery.com/" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source srcset="https://posva-sponsors.pages.dev/logos/vuemastery-dark.png" media="(prefers-color-scheme: dark)" height="42px" alt="VueMastery" />
-        <img src="https://posva-sponsors.pages.dev/logos/vuemastery-light.svg" height="42px" alt="VueMastery" />
-      </picture>
-    </a>
-    <a href="https://birdeatsbug.com/?utm_source=vuerouter&utm_medium=sponsor&utm_campaign=silver" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source srcset="https://posva-sponsors.pages.dev/logos/birdeatsbug-light.svg" media="(prefers-color-scheme: dark)" height="42px" alt="Bird Eats Bug" />
-        <img src="https://posva-sponsors.pages.dev/logos/birdeatsbug-dark.svg" height="42px" alt="Bird Eats Bug" />
-      </picture>
-    </a>
-  </p>
+    <picture>
+      <source srcset="https://posva-sponsors.pages.dev/logos/vuemastery-dark.png" media="(prefers-color-scheme: dark)" height="42px" alt="VueMastery" />
+      <img src="https://posva-sponsors.pages.dev/logos/vuemastery-light.svg" height="42px" alt="VueMastery" />
+    </picture>
+  </a>
+    <a href="https://www.prefect.io/" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source srcset="https://posva-sponsors.pages.dev/logos/prefectlogo-dark.svg" media="(prefers-color-scheme: dark)" height="42px" alt="Prefect" />
+      <img src="https://posva-sponsors.pages.dev/logos/prefectlogo-light.svg" height="42px" alt="Prefect" />
+    </picture>
+  </a>
+</p>
 
 <h4 align="center">Bronze Sponsors</h4>
-  <p align="center">
+<p align="center">
+    <a href="https://stormier.ninja" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source srcset="https://avatars.githubusercontent.com/u/2486424?u=7b0c73ae5d090ce53bf59473094e9606fe082c59&v=4" media="(prefers-color-scheme: dark)" height="26px" alt="Stanislas OrmiÃ¨res" />
+      <img src="https://avatars.githubusercontent.com/u/2486424?u=7b0c73ae5d090ce53bf59473094e9606fe082c59&v=4" height="26px" alt="Stanislas OrmiÃ¨res" />
+    </picture>
+  </a>
+    <a href="www.vuejs.de" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source srcset="https://avatars.githubusercontent.com/u/4183726?u=6b50a8ea16de29d2982f43c5640b1db9299ebcd1&v=4" media="(prefers-color-scheme: dark)" height="26px" alt="Antony Konstantinidis" />
+      <img src="https://avatars.githubusercontent.com/u/4183726?u=6b50a8ea16de29d2982f43c5640b1db9299ebcd1&v=4" height="26px" alt="Antony Konstantinidis" />
+    </picture>
+  </a>
     <a href="https://storyblok.com" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source srcset="https://posva-sponsors.pages.dev/logos/storyblok.png" media="(prefers-color-scheme: dark)" height="26px" alt="Storyblok" />
-        <img src="https://posva-sponsors.pages.dev/logos/storyblok.png" height="26px" alt="Storyblok" />
-      </picture>
-    </a>
+    <picture>
+      <source srcset="https://posva-sponsors.pages.dev/logos/storyblok.png" media="(prefers-color-scheme: dark)" height="26px" alt="Storyblok" />
+      <img src="https://posva-sponsors.pages.dev/logos/storyblok.png" height="26px" alt="Storyblok" />
+    </picture>
+  </a>
     <a href="https://nuxtjs.org" target="_blank" rel="noopener noreferrer">
-      <picture>
-        <source srcset="https://posva-sponsors.pages.dev/logos/nuxt-dark.svg" media="(prefers-color-scheme: dark)" height="26px" alt="NuxtJS" />
-        <img src="https://posva-sponsors.pages.dev/logos/nuxt-light.svg" height="26px" alt="NuxtJS" />
-      </picture>
-    </a>
-  </p>
+    <picture>
+      <source srcset="https://posva-sponsors.pages.dev/logos/nuxt-dark.svg" media="(prefers-color-scheme: dark)" height="26px" alt="NuxtJS" />
+      <img src="https://posva-sponsors.pages.dev/logos/nuxt-light.svg" height="26px" alt="NuxtJS" />
+    </picture>
+  </a>
+</p>
+
 <!--sponsors end-->
 
 ---
@@ -86,9 +99,9 @@ Pinia is the most similar English pronunciation of the word _pineapple_ in Spani
 
 A few notes about the project and possible questions:
 
-**Q**: _Does this replace Vuex, is it its successor?_
+**Q**: _Is Pinia the successor of Vuex?_
 
-**A**: No, or at least that's not the main intention
+**A**: [Yes](https://vuejs.org/guide/scaling-up/state-management.html#pinia)
 
 **Q**: _What about dynamic modules?_
 
@@ -148,7 +161,7 @@ export const useMainStore = defineStore('main', {
     doubleCount: (state) => state.counter * 2,
     // use getters in other getters
     doubleCountPlusOne(): number {
-      return this.doubleCount * 2 + 1
+      return this.doubleCount + 1
     },
   },
   // optional actions
@@ -192,4 +205,3 @@ To learn more about Pinia, check [its documentation](https://pinia.vuejs.org).
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-

@@ -22,21 +22,28 @@ const productionHead = [
   ],
 ]
 
-const darkModeFix = require('fs').readFileSync(
-  require('path').resolve(__dirname, './darkModeFix.js'),
-  'utf-8'
-)
-
 /**
  * @type {import('vitepress').UserConfig}
  */
 module.exports = {
+  markdown: {
+    attrs: {
+      leftDelimiter: '%{',
+      rightDelimiter: '}%',
+    },
+  },
   title: 'Pinia',
   lang: 'en-US',
   description: 'The Vue Store that you will enjoy using',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+
+    [
+      'meta',
+      { name: 'wwads-cn-verify', content: '5878a7ab84fb43402106c575658472fa' },
+    ],
+
     [
       'meta',
       {
@@ -118,7 +125,6 @@ module.exports = {
       },
     ],
 
-    ['script', {}, darkModeFix],
     ...(isProduction ? productionHead : []),
   ],
 

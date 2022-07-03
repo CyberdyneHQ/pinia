@@ -1,3 +1,50 @@
+## [2.0.14](https://github.com/vuejs/pinia/compare/pinia@2.0.13...pinia@2.0.14) (2022-05-05)
+
+### Bug Fixes
+
+- avoid multiple subscriptions with empty promises ([6c17168](https://github.com/vuejs/pinia/commit/6c17168b03307f257491dbd6c0962d5bfade02cc)), closes [#1129](https://github.com/vuejs/pinia/issues/1129)
+- correctly detect option stores ([11b92fd](https://github.com/vuejs/pinia/commit/11b92fd9e4b1d2402df79de9fc47c32c1b9ce726)), closes [#1272](https://github.com/vuejs/pinia/issues/1272)
+- **devtools:** remove in tests environment ([4aeb0a5](https://github.com/vuejs/pinia/commit/4aeb0a539f7389a628e6c32bb6849ce3cd50cc17))
+
+## [2.0.13](https://github.com/vuejs/pinia/compare/pinia@2.0.12...pinia@2.0.13) (2022-03-31)
+
+### Bug Fixes
+
+- avoid prototype pollution ([e4858f9](https://github.com/vuejs/pinia/commit/e4858f9d5f447ba6162ca9f2472608a8bac3eca7))
+- **vue2:** use toRefs in storeToRefs ([0f24ad2](https://github.com/vuejs/pinia/commit/0f24ad27f16bd473e20a8671cd24877d2603cbcf)), closes [#852](https://github.com/vuejs/pinia/issues/852)
+
+### Features
+
+- update devtools-api ([5334222](https://github.com/vuejs/pinia/commit/53342222c536b0dc122f491525ca1c5ad8d25a05))
+
+## [2.0.12](https://github.com/vuejs/pinia/compare/pinia@2.0.11...pinia@2.0.12) (2022-03-14)
+
+### Bug Fixes
+
+- **devtools:** avoid error in getters ([a64c19d](https://github.com/vuejs/pinia/commit/a64c19d33ed60dac1b1c1f98cf2055615a45f6d8)), closes [#1062](https://github.com/vuejs/pinia/issues/1062)
+- **types:** exclude internal properties from store ([f8f944f](https://github.com/vuejs/pinia/commit/f8f944fcdd4411c2f84297786955c4c157fbeebe)), closes [#1013](https://github.com/vuejs/pinia/issues/1013)
+
+### Features
+
+- **devtools:** allow disable logs ([43f690f](https://github.com/vuejs/pinia/commit/43f690f10c35b2c309cd091225379afc0479ad93))
+- **devtools:** use api.now() ([836ab86](https://github.com/vuejs/pinia/commit/836ab865b48f09df5dc848e69ad14597cbaaf21e))
+- up vue-devtools ([e8e5f28](https://github.com/vuejs/pinia/commit/e8e5f28e08a37ed1d30e680df95ce6f3307775ed))
+- **warn:** avoid vue 2 bug storeToRefs() ([f692fdf](https://github.com/vuejs/pinia/commit/f692fdfe623389f3d85c90e5a923c5cfb15c0b0b)), closes [#852](https://github.com/vuejs/pinia/issues/852)
+
+## [2.0.11](https://github.com/vuejs/pinia/compare/pinia@2.0.10...pinia@2.0.11) (2022-01-30)
+
+### Bug Fixes
+
+- **types:** custom Awaited for TS 4.x ([7fcb62e](https://github.com/vuejs/pinia/commit/7fcb62e6fc77e273daf5396d68a9b17126d3ea35)), closes [#1006](https://github.com/vuejs/pinia/issues/1006)
+
+## [2.0.10](https://github.com/vuejs/pinia/compare/pinia@2.0.9...pinia@2.0.10) (2022-01-27)
+
+### Bug Fixes
+
+- check HTMLAnchorElement in saveAs for mini-program ([#966](https://github.com/vuejs/pinia/issues/966)) ([#967](https://github.com/vuejs/pinia/issues/967)) ([85daefb](https://github.com/vuejs/pinia/commit/85daefb7c3325d3cd258de9812cb117c393b8f99))
+- **subscriptions:** allow removing subscriptions inside them ([#990](https://github.com/vuejs/pinia/issues/990)) ([465d222](https://github.com/vuejs/pinia/commit/465d22292a0086eb610f5f83edd64a795eba329b))
+- **types:** custom Awaited for TS 4.x ([7c51126](https://github.com/vuejs/pinia/commit/7c51126d5b59b0c1a693df7c4a93bd4cf309b79b)), closes [#957](https://github.com/vuejs/pinia/issues/957)
+
 ## [2.0.9](https://github.com/vuejs/pinia/compare/pinia@2.0.8...pinia@2.0.9) (2021-12-24)
 
 ### Features

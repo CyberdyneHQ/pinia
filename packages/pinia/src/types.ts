@@ -30,7 +30,7 @@ export function isPlainObject(
 /**
  * Recursive `Partial<T>`. Used by {@link Store.$patch}.
  *
- * @internal
+ * For internal use **only**
  */
 export type _DeepPartial<T> = { [K in keyof T]?: _DeepPartial<T[K]> }
 // type DeepReadonly<T> = { readonly [P in keyof T]: DeepReadonly<T[P]> }
@@ -159,10 +159,20 @@ export type SubscriptionCallback<S> = (
   state: UnwrapRef<S>
 ) => void
 
+// to support TS 4.4
+// TODO: remove in 2.1.0, use Awaited, and up the peer dep to TS 4.5
+export type _Awaited<T> = T extends null | undefined
+  ? T // special case for `null | undefined` when not in `--strictNullChecks` mode
+  : T extends object & { then(onfulfilled: infer F): any } // `await` only unwraps object types with a callable `then`. Non-object types are not unwrapped
+  ? F extends (value: infer V, ...args: any) => any // if the argument to `then` is callable, extracts the first argument
+    ? _Awaited<V> // recursively unwrap the value
+    : never // the argument to `then` was not callable
+  : T // non-object or non-thenable
+
 /**
  * Actual type for {@link StoreOnActionListenerContext}. Exists for refactoring
  * purposes. For internal use only.
- * @internal
+ * For internal use **only**
  */
 export interface _StoreOnActionListenerContext<
   Store,
@@ -188,18 +198,11 @@ export interface _StoreOnActionListenerContext<
 
   /**
    * Sets up a hook once the action is finished. It receives the return value
-   * of the action, if it's a Promise, it will be unwrapped. Can return a
-   * value (other than `undefined`) to **override** the returned value.
+   * of the action, if it's a Promise, it will be unwrapped.
    */
   after: (
     callback: A extends Record<ActionName, _Method>
-      ? (
-          resolvedReturn: Awaited<ReturnType<A[ActionName]>>
-          // allow the after callback to override the return value
-        ) =>
-          | void
-          | ReturnType<A[ActionName]>
-          | Awaited<ReturnType<A[ActionName]>>
+      ? (resolvedReturn: _Awaited<ReturnType<A[ActionName]>>) => void
       : () => void
   ) => void
 
@@ -207,7 +210,7 @@ export interface _StoreOnActionListenerContext<
    * Sets up a hook if the action fails. Return `false` to catch the error and
    * stop it fro propagating.
    */
-  onError: (callback: (error: unknown) => unknown | false) => void
+  onError: (callback: (error: unknown) => void) => void
 }
 
 /**
@@ -279,8 +282,6 @@ export interface StoreProperties<Id extends string> {
    * Used by devtools plugin to retrieve properties added with plugins. Removed
    * in production. Can be used by the user to add property keys of the store
    * that should be displayed in devtools.
-   *
-   * @internal
    */
   _customProperties: Set<string>
 
@@ -353,7 +354,7 @@ export interface _StoreWithState<
 
   /**
    * Setups a callback to be called whenever the state changes. It also returns a function to remove the callback. Note
-   * than when calling `store.$subscribe()` inside of a component, it will be automatically cleanup up when the
+   * that when calling `store.$subscribe()` inside of a component, it will be automatically cleaned up when the
    * component gets unmounted unless `detached` is set to true.
    *
    * @param callback - callback passed to the watcher
@@ -378,7 +379,7 @@ export interface _StoreWithState<
    * once the action finishes or when it fails.
    *
    * It also returns a function to remove the callback. Note than when calling
-   * `store.$onAction()` inside of a component, it will be automatically cleanup
+   * `store.$onAction()` inside of a component, it will be automatically cleaned
    * up when the component gets unmounted unless `detached` is set to true.
    *
    * @example
@@ -426,7 +427,7 @@ export interface _StoreWithState<
 /**
  * Generic type for a function that can infer arguments and return type
  *
- * @internal
+ * For internal use **only**
  */
 export type _Method = (...args: any[]) => any
 
@@ -438,7 +439,7 @@ export type _Method = (...args: any[]) => any
 // in this type we forget about this because otherwise the type is recursive
 /**
  * Store augmented for actions. For internal usage only.
- * @internal
+ * For internal use **only**
  */
 export type _StoreWithActions<A> = {
   [k in keyof A]: A[k] extends (...args: infer P) => infer R
@@ -448,7 +449,7 @@ export type _StoreWithActions<A> = {
 
 /**
  * Store augmented with getters. For internal usage only.
- * @internal
+ * For internal use **only**
  */
 export type _StoreWithGetters<G> = {
   readonly [k in keyof G]: G[k] extends (...args: any[]) => infer R
@@ -532,7 +533,7 @@ export interface PiniaCustomStateProperties<S extends StateTree = StateTree> {}
 
 /**
  * Type of an object of Getters that infers the argument. For internal usage only.
- * @internal
+ * For internal use **only**
  */
 export type _GettersTree<S extends StateTree> = Record<
   string,
@@ -542,13 +543,13 @@ export type _GettersTree<S extends StateTree> = Record<
 
 /**
  * Type of an object of Actions. For internal usage only.
- * @internal
+ * For internal use **only**
  */
 export type _ActionsTree = Record<string, _Method>
 
 /**
  * Type that enables refactoring through IDE.
- * @internal
+ * For internal use **only**
  */
 export type _ExtractStateFromSetupStore_Keys<SS> = keyof {
   [K in keyof SS as SS[K] extends _Method | ComputedRef ? never : K]: any
@@ -556,7 +557,7 @@ export type _ExtractStateFromSetupStore_Keys<SS> = keyof {
 
 /**
  * Type that enables refactoring through IDE.
- * @internal
+ * For internal use **only**
  */
 export type _ExtractActionsFromSetupStore_Keys<SS> = keyof {
   [K in keyof SS as SS[K] extends _Method ? K : never]: any
@@ -564,7 +565,7 @@ export type _ExtractActionsFromSetupStore_Keys<SS> = keyof {
 
 /**
  * Type that enables refactoring through IDE.
- * @internal
+ * For internal use **only**
  */
 export type _ExtractGettersFromSetupStore_Keys<SS> = keyof {
   [K in keyof SS as SS[K] extends ComputedRef ? K : never]: any
@@ -572,12 +573,12 @@ export type _ExtractGettersFromSetupStore_Keys<SS> = keyof {
 
 /**
  * Type that enables refactoring through IDE.
- * @internal
+ * For internal use **only**
  */
 export type _UnwrapAll<SS> = { [K in keyof SS]: UnwrapRef<SS[K]> }
 
 /**
- * @internal
+ * For internal use **only**
  */
 export type _ExtractStateFromSetupStore<SS> = SS extends undefined | void
   ? {}
@@ -586,7 +587,7 @@ export type _ExtractStateFromSetupStore<SS> = SS extends undefined | void
   : never
 
 /**
- * @internal
+ * For internal use **only**
  */
 export type _ExtractActionsFromSetupStore<SS> = SS extends undefined | void
   ? {}
@@ -595,7 +596,7 @@ export type _ExtractActionsFromSetupStore<SS> = SS extends undefined | void
   : never
 
 /**
- * @internal
+ * For internal use **only**
  */
 export type _ExtractGettersFromSetupStore<SS> = SS extends undefined | void
   ? {}

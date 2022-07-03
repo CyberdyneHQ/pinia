@@ -200,6 +200,38 @@ describe('Subscriptions', () => {
       expect(spy2).toHaveBeenCalledTimes(1)
     })
 
+    it('triggers pre subscriptions only once on $patch', async () => {
+      const s1 = useStore()
+      const spy1 = jest.fn()
+
+      s1.$subscribe(spy1, { flush: 'pre' })
+
+      // First mutation: works as expected
+      s1.$patch({ user: 'Edu' })
+      // anything else than awaiting a non promise or Promise.resolve() works
+      await false
+      // await Promise.resolve(false)
+      // adding an extra await works
+      // await false
+      // adding any other delay also works
+      // await delay(20)
+      // await nextTick()
+      expect(spy1).toHaveBeenCalledTimes(1)
+      expect(spy1).not.toHaveBeenCalledWith(
+        expect.objectContaining({ type: MutationType.direct }),
+        s1.$state
+      )
+
+      s1.$patch({ user: 'Myk' })
+      await nextTick()
+
+      expect(spy1).toHaveBeenCalledTimes(2)
+      expect(spy1).not.toHaveBeenCalledWith(
+        expect.objectContaining({ type: MutationType.direct }),
+        s1.$state
+      )
+    })
+
     it('removes on unmount', async () => {
       const pinia = createPinia()
       setActivePinia(pinia)
@@ -271,5 +303,34 @@ describe('Subscriptions', () => {
       }),
       store.$state
     )
+  })
+
+  it('subscribe once with patch', () => {
+    const spy1 = jest.fn()
+    const spy2 = jest.fn()
+    const store = useStore()
+    function once() {
+      const unsubscribe = store.$subscribe(
+        () => {
+          spy1()
+          unsubscribe()
+        },
+        { flush: 'sync' }
+      )
+    }
+    once()
+    store.$subscribe(spy2, { flush: 'sync' })
+    expect(spy1).toHaveBeenCalledTimes(0)
+    expect(spy2).toHaveBeenCalledTimes(0)
+    store.$patch((state) => {
+      state.user = 'a'
+    })
+    expect(spy1).toHaveBeenCalledTimes(1)
+    expect(spy2).toHaveBeenCalledTimes(1)
+    store.$patch((state) => {
+      state.user = 'b'
+    })
+    expect(spy1).toHaveBeenCalledTimes(1)
+    expect(spy2).toHaveBeenCalledTimes(2)
   })
 })
