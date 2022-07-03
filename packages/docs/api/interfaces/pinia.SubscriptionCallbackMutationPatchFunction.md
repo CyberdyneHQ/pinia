@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -31,7 +31,7 @@ DEV ONLY. Array of all the mutations done inside of the callback.
 
 [packages/pinia/src/types.ts:129](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L129)
 
-___
+---
 
 ### storeId
 
@@ -41,13 +41,13 @@ ___
 
 #### Inherited from
 
-[_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[storeId](pinia._SubscriptionCallbackMutationBase.md#storeid)
+[\_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[storeId](pinia._SubscriptionCallbackMutationBase.md#storeid)
 
 #### Defined in
 
 [packages/pinia/src/types.ts:81](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L81)
 
-___
+---
 
 ### type
 
@@ -57,7 +57,7 @@ Type of the mutation.
 
 #### Overrides
 
-[_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[type](pinia._SubscriptionCallbackMutationBase.md#type)
+[\_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[type](pinia._SubscriptionCallbackMutationBase.md#type)
 
 #### Defined in
 

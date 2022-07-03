@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -8,18 +8,18 @@ sidebarDepth: 3
 
 # Interface: \_StoreWithState<Id, S, G, A\>
 
-[pinia](../modules/pinia.md)._StoreWithState
+[pinia](../modules/pinia.md).\_StoreWithState
 
 Base store with state and functions. Should not be used directly.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Id` | extends `string` |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) |
-| `G` | `G` |
-| `A` | `A` |
+| Name | Type                                                 |
+| :--- | :--------------------------------------------------- |
+| `Id` | extends `string`                                     |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) |
+| `G`  | `G`                                                  |
+| `A`  | `A`                                                  |
 
 ## Hierarchy
 
@@ -43,7 +43,7 @@ Unique identifier of the store
 
 [packages/pinia/src/types.ts:265](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L265)
 
-___
+---
 
 ### $state
 
@@ -55,7 +55,7 @@ State of the Store. Setting it will replace the whole state.
 
 [packages/pinia/src/types.ts:335](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L335)
 
-___
+---
 
 ### \_customProperties
 
@@ -67,7 +67,7 @@ that should be displayed in devtools.
 
 #### Inherited from
 
-[StoreProperties](pinia.StoreProperties.md).[_customProperties](pinia.StoreProperties.md#_customproperties)
+[StoreProperties](pinia.StoreProperties.md).[\_customProperties](pinia.StoreProperties.md#_customproperties)
 
 #### Defined in
 
@@ -91,7 +91,7 @@ e.g. devtools plugin stops displaying disposed stores from devtools.
 
 [packages/pinia/src/types.ts:423](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L423)
 
-___
+---
 
 ### $onAction
 
@@ -100,6 +100,7 @@ ___
 Setups a callback to be called every time an action is about to get
 invoked. The callback receives an object with all the relevant information
 of the invoked action:
+
 - `store`: the store it is invoked on
 - `name`: The name of the action
 - `args`: The parameters passed to the action
@@ -130,10 +131,10 @@ store.$onAction(({ after, onError }) => {
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `callback` | [`StoreOnActionListener`](../modules/pinia.md#storeonactionlistener)<`Id`, `S`, `G`, `A`\> | callback called before every action |
-| `detached?` | `boolean` | detach the subscription from the context this is called from |
+| Name        | Type                                                                                       | Description                                                  |
+| :---------- | :----------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
+| `callback`  | [`StoreOnActionListener`](../modules/pinia.md#storeonactionlistener)<`Id`, `S`, `G`, `A`\> | callback called before every action                          |
+| `detached?` | `boolean`                                                                                  | detach the subscription from the context this is called from |
 
 #### Returns
 
@@ -146,6 +147,7 @@ function that removes the watcher
 Setups a callback to be called every time an action is about to get
 invoked. The callback receives an object with all the relevant information
 of the invoked action:
+
 - `store`: the store it is invoked on
 - `name`: The name of the action
 - `args`: The parameters passed to the action
@@ -184,7 +186,7 @@ function that removes the watcher
 
 [packages/pinia/src/types.ts:413](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L413)
 
-___
+---
 
 ### $patch
 
@@ -194,8 +196,8 @@ Applies a state patch to current state. Allows passing nested values
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name           | Type                                                                   | Description                 |
+| :------------- | :--------------------------------------------------------------------- | :-------------------------- |
 | `partialState` | [`_DeepPartial`](../modules/pinia.md#_deeppartial)<`UnwrapRef`<`S`\>\> | patch to apply to the state |
 
 #### Returns
@@ -214,14 +216,14 @@ to an array. The function passed to `$patch()` **must be synchronous**.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `F` | extends (`state`: `UnwrapRef`<`S`\>) => `any` |
+| Name | Type                                          |
+| :--- | :-------------------------------------------- |
+| `F`  | extends (`state`: `UnwrapRef`<`S`\>) => `any` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name           | Type                                                         | Description                                    |
+| :------------- | :----------------------------------------------------------- | :--------------------------------------------- |
 | `stateMutator` | `ReturnType`<`F`\> extends `Promise`<`any`\> ? `never` : `F` | function that mutates `state`, cannot be async |
 
 #### Returns
@@ -232,7 +234,7 @@ to an array. The function passed to `$patch()` **must be synchronous**.
 
 [packages/pinia/src/types.ts:351](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L351)
 
-___
+---
 
 ### $reset
 
@@ -249,7 +251,7 @@ TODO: make this options only
 
 [packages/pinia/src/types.ts:360](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L360)
 
-___
+---
 
 ### $subscribe
 
@@ -261,10 +263,10 @@ component gets unmounted unless `detached` is set to true.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `callback` | [`SubscriptionCallback`](../modules/pinia.md#subscriptioncallback)<`S`\> | callback passed to the watcher |
-| `options?` | { `detached?`: `boolean`  } & `WatchOptions`<`boolean`\> | `watch` options + `detached` to detach the subscription from the context (usually a component) this is called from. Note that the `flush` option does not affect calls to `store.$patch()`. |
+| Name       | Type                                                                     | Description                                                                                                                                                                                 |
+| :--------- | :----------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `callback` | [`SubscriptionCallback`](../modules/pinia.md#subscriptioncallback)<`S`\> | callback passed to the watcher                                                                                                                                                              |
+| `options?` | { `detached?`: `boolean` } & `WatchOptions`<`boolean`\>                  | `watch` options + `detached` to detach the subscription from the context (usually a component) this is called from. Note that the `flush` option does not affect calls to `store.$patch()`. |
 
 #### Returns
 

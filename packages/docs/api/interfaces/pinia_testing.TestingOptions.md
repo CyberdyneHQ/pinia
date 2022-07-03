@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -25,7 +25,7 @@ Defaults to false.
 
 [packages/testing/src/testing.ts:57](https://github.com/vuejs/pinia/blob/2b998ee/packages/testing/src/testing.ts#L57)
 
-___
+---
 
 ### initialState
 
@@ -38,7 +38,7 @@ allowing you to only set a few properties that are required in your test.
 
 [packages/testing/src/testing.ts:27](https://github.com/vuejs/pinia/blob/2b998ee/packages/testing/src/testing.ts#L27)
 
-___
+---
 
 ### plugins
 
@@ -51,7 +51,7 @@ your application that will be used while testing.
 
 [packages/testing/src/testing.ts:33](https://github.com/vuejs/pinia/blob/2b998ee/packages/testing/src/testing.ts#L33)
 
-___
+---
 
 ### stubActions
 
@@ -67,7 +67,7 @@ handle this in `createSpy()`.
 
 [packages/testing/src/testing.ts:42](https://github.com/vuejs/pinia/blob/2b998ee/packages/testing/src/testing.ts#L42)
 
-___
+---
 
 ### stubPatch
 
@@ -92,8 +92,8 @@ with `jest.fn()` in jest projects or `vi.fn()` in vitest projects.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type                          |
+| :---- | :---------------------------- |
 | `fn?` | (...`args`: `any`[]) => `any` |
 
 #### Returns
@@ -104,8 +104,8 @@ with `jest.fn()` in jest projects or `vi.fn()` in vitest projects.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type    |
+| :-------- | :------ |
 | `...args` | `any`[] |
 
 ##### Returns

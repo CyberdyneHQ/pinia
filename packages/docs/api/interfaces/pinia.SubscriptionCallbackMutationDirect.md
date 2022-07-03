@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -11,8 +11,7 @@ sidebarDepth: 3
 [pinia](../modules/pinia.md).SubscriptionCallbackMutationDirect
 
 Context passed to a subscription callback when directly mutating the state of
-a store with `store.someState = newValue` or `store.$state.someState =
-newValue`.
+a store with `store.someState = newValue` or `store.$state.someState = newValue`.
 
 ## Hierarchy
 
@@ -32,7 +31,7 @@ DEV ONLY. Different mutation calls.
 
 [packages/pinia/src/types.ts:96](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L96)
 
-___
+---
 
 ### storeId
 
@@ -42,13 +41,13 @@ ___
 
 #### Inherited from
 
-[_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[storeId](pinia._SubscriptionCallbackMutationBase.md#storeid)
+[\_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[storeId](pinia._SubscriptionCallbackMutationBase.md#storeid)
 
 #### Defined in
 
 [packages/pinia/src/types.ts:81](https://github.com/vuejs/pinia/blob/2b998ee/packages/pinia/src/types.ts#L81)
 
-___
+---
 
 ### type
 
@@ -58,7 +57,7 @@ Type of the mutation.
 
 #### Overrides
 
-[_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[type](pinia._SubscriptionCallbackMutationBase.md#type)
+[\_SubscriptionCallbackMutationBase](pinia._SubscriptionCallbackMutationBase.md).[type](pinia._SubscriptionCallbackMutationBase.md#type)
 
 #### Defined in
 

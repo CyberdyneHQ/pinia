@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -15,12 +15,12 @@ augment stores with the plugin API. @see [DefineStoreOptionsBase](pinia.DefineSt
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `Id` | extends `string` |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) |
-| `G` | `G` |
-| `A` | `A` |
+| Name | Type                                                 |
+| :--- | :--------------------------------------------------- |
+| `Id` | extends `string`                                     |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) |
+| `G`  | `G`                                                  |
+| `A`  | `A`                                                  |
 
 ## Hierarchy
 

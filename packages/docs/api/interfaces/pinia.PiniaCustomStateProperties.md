@@ -1,5 +1,5 @@
 ---
-sidebar: "auto"
+sidebar: 'auto'
 editLinks: false
 sidebarDepth: 3
 ---
@@ -14,6 +14,6 @@ Properties that are added to every `store.$state` by `pinia.use()`.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `S` | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
+| Name | Type                                                                                                |
+| :--- | :-------------------------------------------------------------------------------------------------- |
+| `S`  | extends [`StateTree`](../modules/pinia.md#statetree) = [`StateTree`](../modules/pinia.md#statetree) |
