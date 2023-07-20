@@ -64,8 +64,8 @@ import { defineStore } from 'pinia'
 
 const useCounterStore = defineStore('counterStore', {
   state: () => ({
-    counter: 0
-  })
+    counter: 0,
+  }),
 })
 ```
 
