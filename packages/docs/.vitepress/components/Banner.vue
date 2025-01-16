@@ -4,63 +4,61 @@
     id="vs"
     href="https://vueschool.io/sales/summer-vue/?friend=vuerouter"
     target="_blank"
-    rel="noreferrer">
+    rel="noreferrer"
+  >
     <div class="vs-iso">
-      <img src="/images/vueschool/vs-iso.svg" alt="Vue School Logo">
+      <img src="/images/vueschool/vs-iso.svg" alt="Vue School Logo" />
     </div>
     <div class="vs-logo">
-      <img src="/images/vueschool/vs-logo.svg" alt="Vue School Logo">
+      <img src="/images/vueschool/vs-logo.svg" alt="Vue School Logo" />
     </div>
     <div class="vs-core">
       <div class="vs-backpack">
-        <img src="/images/vueschool/vs-backpack.png" alt="Backpack">
+        <img src="/images/vueschool/vs-backpack.png" alt="Backpack" />
       </div>
       <div class="vs-slogan">
-        <span class="vs-slogan-light">Summer Sale:</span> Get the 3 months plan for only <span style="text-decoration: line-through">$75</span> $50
+        <span class="vs-slogan-light">Summer Sale:</span> Get the 3 months plan
+        for only <span style="text-decoration: line-through">$75</span> $50
       </div>
-      <div class="vs-button">
-        Get 33% OFF
-      </div>
+      <div class="vs-button">Get 33% OFF</div>
     </div>
-    <div
-      id="vs-close"
-      class="vs-close"
-      @click.stop.prevent="close">
-      <img src="/images/vueschool/close.svg" alt="Close">
+    <div id="vs-close" class="vs-close" @click.stop.prevent="close">
+      <img src="/images/vueschool/close.svg" alt="Close" />
     </div>
   </a>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      isVisible: false
+      isVisible: false,
     }
   },
-  mounted () {
+  mounted() {
     const now = new Date()
     const end = new Date('2022-07-23T00:00:00+02:00')
-    this.isVisible = !localStorage.getItem('VS_SUMMER_22') && (now < end)
+    this.isVisible = !localStorage.getItem('VS_SUMMER_22') && now < end
     if (this.isVisible) document.body.classList.add('has-top-banner')
   },
   methods: {
-    close () {
+    close() {
       this.isVisible = false
       document.body.classList.remove('has-top-banner')
       localStorage.setItem('VS_SUMMER_22', 1)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style>
 #vs {
   align-items: center;
-  background-color: #202A5A;
+  background-color: #202a5a;
   box-sizing: border-box;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   justify-content: center;
   position: fixed;
   padding: 0 10px;
@@ -137,7 +135,7 @@ export default {
   }
 }
 #vs .vs-core .vs-slogan {
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   font-size: 14px;
   margin-right: 26px;
@@ -228,5 +226,4 @@ export default {
     margin-top: 80px;
   }
 }
-
 </style>
